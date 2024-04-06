@@ -6,5 +6,3 @@ The system allows you to control a conventional three-color LED traffic light. T
 - **night mode**, turning the yellow color on and off.
 
 The system was developed in assembly language for the **ATMega328P** microcontroller.
-
-The project includes an *.asm* file for interpretation into a hex file, as well as a *.pdsprj* file for simulating system operation in Proteus Design Suite 8.10.
