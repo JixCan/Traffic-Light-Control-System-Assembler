@@ -26,8 +26,8 @@ Reset:
 	; Stack initialization
 	ldi temp, High(RAMEND)
 	out SPH,temp             
-    ldi temp,Low(RAMEND)    
-    out SPL,temp
+    	ldi temp,Low(RAMEND)    
+    	out SPL,temp
 
 	; Enable TIMER1 interrupts, OVERFLOW mode
 	ldi temp, 0b00000001
@@ -37,12 +37,12 @@ Reset:
 	; TIMER1 counter start value: 0x85EE (34286 ticks)
 	ldi r30, 0x85      
 	ldi r31, 0xEE
-    sts 0x085, r30    
-    sts 0x084, r31
+    	sts 0x085, r30    
+    	sts 0x084, r31
 
 	; Predivider: Clk/256
 	ldi temp, 0b00000100
-    sts 0x081, temp 
+    	sts 0x081, temp 
 
 	; Port initialization
 	clr temp
@@ -66,7 +66,6 @@ Main:
 	rjmp DayMode
 
 NightMode:
-	sts 0x0200, TickCounter
 	; Depending on the counter value, go to the specified label
 	; Every 0.5 seconds TickCounter increases by 1
 	cpi TickCounter, 0x00
@@ -93,7 +92,6 @@ NightMode_ClearCounter:
 	rjmp NightMode
 
 DayMode:
-	sts 0x0200, TickCounter
 	; Depending on the counter value, go to the specified label
 	; Every 0.5 seconds TickCounter increases by 1
 	cpi TickCounter, 0x00
