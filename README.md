@@ -8,6 +8,3 @@ The system allows you to control a conventional three-color LED traffic light. T
 The system was developed in assembly language for the **ATMega328P** microcontroller.
 
 The project includes an *.asm* file for interpretation into a hex file, as well as a *.pdsprj* file for simulating system operation in Proteus Design Suite 8.10.
-
-![An example of a system schematic diagram in Proteus 8.10.](https://i.ibb.co/ZBRNqwG/image.png)
-An example of a system schematic diagram in Proteus 8.10
